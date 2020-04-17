@@ -7,7 +7,7 @@
 
 - 第 1 章　JavaScript简介
 - 第 2 章　ECMAScript和TypeScript概述
-- 第 3 章　数组	阅读
+- 第 3 章　数组
 - 第 4 章　栈	
 - 第 5 章　队列和双端队列	
 - 第 6 章　链表	
