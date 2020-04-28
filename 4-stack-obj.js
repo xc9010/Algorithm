@@ -66,4 +66,3 @@ console.log(arr.peek())
 arr.clear();
 
 console.log(JSON.stringify(arr))
-
