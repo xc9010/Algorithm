@@ -3,7 +3,7 @@ class Stack {
         this.count = 0;
         this.items = {};
     }
-    // function
+    // API
 
     // 插入元素
     push(el) {
