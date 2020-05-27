@@ -8,7 +8,13 @@
             "type": "node",
             "request": "launch",
             "name": "4-stack-obj",
-            "program": "${workspaceFolder}/4-stack-obj.js"
-        }
+            "program": "${workspaceFolder}/4-栈/4-stack-obj.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "5-queue",
+            "program": "${workspaceFolder}/5-队列和双端队列/queue.js"
+        },
     ]
 }
