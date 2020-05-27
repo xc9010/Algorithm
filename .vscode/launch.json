@@ -16,5 +16,11 @@
             "name": "5-queue",
             "program": "${workspaceFolder}/5-队列和双端队列/queue.js"
         },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "5-deque",
+            "program": "${workspaceFolder}/5-队列和双端队列/deque.js"
+        },
     ]
 }
