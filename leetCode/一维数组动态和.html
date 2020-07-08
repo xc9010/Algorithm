@@ -1,0 +1,90 @@
+<html>
+
+<body>
+    <div>
+        <p>给你一个数组 nums 。</p>
+        <p>数组「动态和」的计算公式为：runningSum[i] = sum(nums[0]…nums[i]) 。</p>
+        <p>请返回 nums 的动态和。</p>
+
+        <div>
+            输入：nums = [1,2,3,4]
+            输出：[1,3,6,10]
+            解释：动态和计算过程为 [1, 1+2, 1+2+3, 1+2+3+4] 。
+        </div>
+        <div>
+            输入：nums = [1,1,1,1,1]
+            输出：[1,2,3,4,5]
+            解释：动态和计算过程为 [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1] 。
+
+        </div>
+        <div>
+            输入：nums = [3,1,2,10,1]
+            输出：[3,4,6,16,17]
+        </div>
+
+        <div>
+            <li>
+                1 <= nums.length <=1000 </li> <li>
+                    -10^6 <= nums[i] <=10^6 </li> </div> <a
+                        href="https://leetcode-cn.com/problems/running-sum-of-1d-array/">
+                        https://leetcode-cn.com/problems/running-sum-of-1d-array/</a>
+        </div>
+        <div>
+            <p>
+                7-8思路：利用栈或者队列，先取出第一个存入栈中，后面按顺序取出每个值，与栈尾的值相加，存入栈尾，直到取完
+            </p>
+        </div>
+</body>
+
+<script>
+    /**
+     * @param {number[]} nums
+     * @return {number[]}
+     */
+    var runningSum = function (nums) {
+        function sun(arr) {
+            return arr.reduce((pre, cur) => pre + cur);
+        }
+        return arr = nums.map((v, i) => {
+            if (i === 0) return v
+            return sun(nums.slice(0, i)) + v
+        })
+    };
+
+    var arr = [1, 2, 3, 4]
+
+    console.log(runningSum(arr))
+
+    console.log('------------------')
+
+    var arr1 = [1, 2, 3, 4]
+    var runningSum1 = function (nums) {
+        var arr = [];
+        for (var i = 0; i < nums.length; i++) {
+            if (arr.length < 1) {
+                arr.push(nums[0]);
+            } else {
+                arr.push(arr[i - 1] + nums[i]);
+            }
+        }
+        return arr;
+    };
+
+    console.log(runningSum1(arr1))
+
+    console.log('------------------')
+
+    var arr2 = [1, 2, 3, 4]
+    var runningSum2 = function (nums) {
+        const arr = nums.forEach((v, i) => {
+            console.log(v)
+        })
+        return arr;
+    };
+
+    console.log(runningSum2(arr2))
+
+
+</script>
+
+</html>
